@@ -7,25 +7,6 @@
     <link href="css/public.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
-    <script>
-        function toggleList(id) {
-            var list = document.getElementById(id);
-            if (list.style.display === "block") {
-                list.style.display = "none";
-            } else {
-                list.style.display = "block";
-            }
-        }
-    </script>
-    <style>
-        .nested {
-            display: none;
-        }
-
-        .active {
-            display: block;
-        }
-    </style>
 </head>
 <body>
 <div id="dcWrap">
@@ -55,10 +36,10 @@
 
 
         <ul>
-            <li ><a href="#"><i class="show"></i><em>消息中心</em></a></li>
+            <li ><a href="#"><i class="mobile"></i><em>消息中心</em></a></li>
         </ul>
         <ul>
-            <li><a href="#"><i class="show"></i><em>个人中心</em></a></li>
+            <li><a href="#"><i class="theme"></i><em>个人中心</em></a></li>
         </ul>
 </div></div>
     <div id="dcMain">
@@ -66,90 +47,73 @@
         <div id="urHere">管理中心<b>></b><strong>最终报告生成</strong> </div>
         <div class="mainBox imgModule">
             <h3>最终报告</h3>
-            <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-                <tr style="font-size: 16px;font-family: 宋体;">
-                    <th>个人信息</th>
-                    <th>观察结果</th>
-                </tr>
-                <tr >
-                    <td style="height:326px;">
-                        <div style="width:100%;height: 50%">
-                            <div style="width: 50%;height:80%;float :left;margin-top: 60px ;text-align: center;">
-                                <img src="images/touxiang.png">
-                            </div>
-                            <div style="width: 50%; float: right;margin-top: 40px;font-size: 15px;font-family: 宋体;">
-                                <div style="width: 50%;float: right"><b> 姓名 : patient1</b></div>
-                                <div style="width: 50%;float: right"><b> ID : 126 734</b></div>
-                                <div style="width: 50%; float: right"><b> 性别 ：男</b></div>
-                                <div style="width: 50%; float: right"><b> 年龄 : 41</b></div>
-                                <div style="width: 50%; float: right"><b> 主治医师 ：李向阳</b></div>
-                                <div style="width: 50%; float: right"><b> 过敏史 ：无</b></div>
-                                <div style="width: 50%; float: left"><b> 入院时间 ：2023-09-17</b></div>
-                                <div style="font-family: 宋体;font-size: 16px;float: left;width: 100%;"><b>主诉：</b>
-                                    <b readonly style="width: 100%;height:35%;font-size: 16px;font-family: 楷体;">出现呼吸困难，肺部疼痛，胸闷等症状</b>
+            <div style="text-align: center;width:100%">
+                <table  style="margin-left: 200px"width="60%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+                    <tr style="font-size: 16px;font-family: 楷体;">
+                        <th>医学诊断报告</th>
+                    </tr>
+                    <tr >
+                    <tr >
+                        <td>
+                            <div style="width:100%">
+                                <div style="width: 100%; float: left;margin-top: 10px;font-size: 15px;font-family: 楷体;">
+                                    <div style="width: 33%;float: left"><b> 姓名 : 李**</b></div>
+                                    <div style="width: 33%; float: left"><b> 性别 ：男</b></div>
+                                    <div style="width: 33%; float: left"><b> 年龄 : 21</b></div>
+                                    <div style="width: 33%; float: left"><b> 主治医师 ：肖医生</b></div>
+                                    <div style="width: 33%; float: left"><b> 过敏史 ：无</b></div>
+                                    <div style="width: 33%; float: left"><b> 入院时间 ：2023-09-17</b></div>
                                 </div>
                             </div>
-                        </div>
-                        <hr style="width:100%;">
-                        <div style="width: 100%;height:32%;margin-top: 10px;text-align: center">
-                            <img src="images/report.png"/>
-                        </div>
-                        <div style="width: 100%; ;margin-bottom: 20px;text-align: center">
-                            <button class="fancy-button">查看大图</button>
-                        </div>
-                    </td>
-                    <td style="font-size: 16px;font-family: 楷体;text-align: center">
-                        <div style="width:100%; text-align: center; background-color: #135f3e ;line-height: 4;">
-                            <form style="background-color: #135f3e ;text-align: center">
+                        </td>
+                    </tr>
+
+                    <tr style="font-size: 16px;font-family: 楷体;text-align: center">
+                        <td>
+                            <div style="width:100%; text-align: center;  line-height: 2;">
                                 <b style="height:30%;margin-top: 10px;">
-                                    <div style="width:30%; float: left; ">
-                                        <input type="checkbox" id="扁平" name="fruit" value="apple"checked>
-                                        <label for="扁平">肺扁平</label>
-                                    </div>
-                                    <div style="width:30%;float: left;">
-                                        <input type="checkbox" id="浑浊" name="fruit" value="banana">
-                                        <label for="浑浊">肺浑浊</label><br>
-                                    </div>
-                                    <div style="width:40%;float: left;">
-                                        <input type="checkbox" id="不张" name="fruit" value="orange">
-                                        <label for="不张">肺不张</label><br>
-                                    </div>
+                                    诊断结果：良性结节
                                 </b>
-                            </form>
-                        </div>
-                        <hr style="width:100%;">
-                        <div style="width:100%;height:70%;font-size: 16px;font-family: 楷体;text-align: left;line-height: 4;">
-                            <form action="">
-                                <b >
-                                    <input type="checkbox" id="观察1" name="fruit" value="apple">
-                                    <label for="观察1">观察到双导线左侧起搏器，导线延伸到右心房和右心室的位置。</label><br>
-                                    <input type="checkbox" id="观察2" name="fruit" value="banana"checked>
-                                    <label for="观察2">肺过度扁平，横隔膜扁平，显示慢性阻塞性肺病。</label><br>
-                                    <input type="checkbox" id="观察3" name="fruit" value="orange">
-                                    <label for="观察3">不排除感染过程，右肺基底的轻微混浊可能与肺不张有关。</label><br>
+
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr style="font-size: 16px;font-family: 楷体;text-align: center">
+                        <td>
+                            <div style="width:100%; text-align: center; line-height: 2;">
+                                <b style="height:30%;margin-top: 10px;">
+                                    属性：有钙化、实性为主、边缘清晰、低回声
                                 </b>
-                            </form>
-                        </div>
-                        <div style="width: 100%; margin-bottom: 20px;text-align: center">
-                            <button class="fancy-button">确认修改并生成报告报告</button>
-                            <button class="fancy-button"onclick="window.location.href = 'fina-report.html';"> 取消修改 </button>
-                        </div>
 
-                    </td>
+                            </div>
+                        </td>
 
-                </tr>
-            </table>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="width:100%;height:70%;font-size: 16px;font-family: 楷体;text-align: left;line-height: 2;margin-bottom: 40px;margin-top: 40px">
+                                <form action="">
+                                    <b>
+                                        报告内容：
+                                    </b>
+                                    <b style="text-align: center">
+                                        在左叶中部，发现一个实性低回声结节，大小约为0.5x0.7x0.6cm。结节的形状不规则，边缘清晰可辨，且结构清楚完整。内部显示点状高回声灶，可能与结节内的血管供应有关。建议进行进一步的评估和诊断。
+                                    </b>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                    </tr>
+                </table>
+            </div>
+
         </div>
     </div>
 </div>
 <div class="clear"></div>
 <div id="dcFooter">
-    <div id="footer">
-        <div class="line"></div>
-        <ul>
-            版权所有 © 2013-2015 <a href="http://www.bootstrapmb.com/" title="bootstrapmb">Reserved</a>，并保留所有权利。
-        </ul>
-    </div>
 </div><!-- dcFooter 结束 -->
 <div class="clear"></div> </div>
 </body>
